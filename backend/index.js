@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URL)
     .then(() => app.listen(process.env.PORT || 8000, () => console.log("Server running at port 8000!")))
 
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
 //
 
