@@ -10,7 +10,7 @@ const __dirname = import.meta.dirname;
 const app = express()
 app.use(cors())
 
-// app.use(express.static(path.join(__dirname, '../frontend/build')))
+app.use(express.static(path.join(__dirname, '../frontend/build')))
 
     mongoose.connect(process.env.MONGO_URL)
     .then(() => console.log("Connected to database!"))
