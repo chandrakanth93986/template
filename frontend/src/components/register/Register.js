@@ -42,7 +42,7 @@ const Register = () => {
         <div className='flex flex-col md:flex-row items-center justify-around m-5'>
             <div className='h-screen flex flex-col items-center justify-center mx-auto md:mx-4'>
                 {
-                    err.length > 0 && <p className='text-red-500 text-center mb-4 text-xl'>{err}</p>
+                    err?.length > 0 && <p className='text-red-500 text-center mb-4 text-xl'>{err}</p>
                 }
                 <form onSubmit={handleSubmit(handleFormSubmit)} className='b min-w-96 min-h-[50%] bg-green-700 text-white p-8 rounded-xl w-[25%]'>
                     <div className='text-center mb-5'>
