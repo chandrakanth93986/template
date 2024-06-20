@@ -15,7 +15,7 @@ const Register = () => {
         let response;
         const registerToast = new Promise(async (resolve, reject) => {
             try {
-                response = await axios.post('/api/user/register', userCred)
+                response = await axios.post('http://localhost:8000/api/user/register', userCred)
                 console.log(response.status);
                 resolve()
             } catch (error) {

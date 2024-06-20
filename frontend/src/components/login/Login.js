@@ -18,7 +18,7 @@ const Login = () => {
         let response;
         const registerToast = new Promise(async (resolve, reject) => {
             try {
-                response = await axios.post('/api/auth/login', userObj)
+                response = await axios.post('http://localhost:8000/api/auth/login', userObj)
                 console.log(response);
                 if (response?.status === 200 || response?.status === 201) {
                     console.log(response?.status);

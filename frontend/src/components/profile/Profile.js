@@ -16,7 +16,7 @@ const Profile = () => {
     let response;
     const registerToast = new Promise(async (resolve, reject) => {
       try {
-        response = await axios.put('/api/user/update', {
+        response = await axios.put('http://localhost:8000/api/user/update', {
           email,
           username,
           avatar,
@@ -51,7 +51,7 @@ const Profile = () => {
     try {
       let response
       let localEmail = localStorage.getItem('email')
-      response = await axios.get(`/api/user/profile/${localEmail}`)
+      response = await axios.get(`http://localhost:8000/api/user/profile/${localEmail}`)
       console.log(response);
       setEmail(response.data?.user?.email)
       setUsername(response.data?.user?.username)
